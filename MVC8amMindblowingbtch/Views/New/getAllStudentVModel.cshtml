@@ -1,0 +1,24 @@
+﻿@model  List<MVC8amMindblowingbtch.Models.StudentModel>
+@{
+    ViewBag.Title = "getAllStudentVModel";
+}
+
+<h2>getAllStudentVModel</h2>
+
+<table class="table table-condensed table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Fees</th>
+        <th>Course</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudId</td>
+            <td>@item.StudName</td>
+            <td>@item.StudFees</td>
+            <td>@item.StudCourse</td>
+        </tr>
+    }
+</table>

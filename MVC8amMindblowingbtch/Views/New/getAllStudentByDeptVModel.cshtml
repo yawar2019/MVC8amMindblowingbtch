@@ -1,0 +1,41 @@
+﻿@model MVC8amMindblowingbtch.Models.StudentDept
+@{
+    ViewBag.Title = "getAllStudentByDeptVModel";
+}
+
+<h2>getAllStudentByDeptVModel</h2>
+
+<table class="table-condensed table-bordered">
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Fees</th>
+        <th>Course</th>
+        <th>Dept Id</th>
+    </tr>
+    @foreach (var item in Model.students)
+    {
+    <tr>
+        <td>@item.StudId</td>
+        <td>@item.StudName</td>
+        <td>@item.StudFees</td>
+        <td>@item.StudCourse</td>
+        <td>@item.DeptId</td>
+    </tr>
+    }
+</table>
+
+
+<table class="table-condensed table-bordered">
+    <tr>
+        <th>Dept Id</th>
+        <th>Department  Name</th>
+    </tr>
+    @foreach (var item in Model.departments)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+             <td>@item.DeptName</td>
+        </tr>
+    }
+</table>

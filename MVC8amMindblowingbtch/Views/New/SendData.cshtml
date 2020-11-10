@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "SendData";
+
+}
+
+<h2>SendData</h2>
+
+
+
+@foreach (var item in ViewBag.StudentDetail)
+{
+    @item.StudIds<br />
+    @item.StudName<br />
+    @item.StudFees<br />
+    @item.StudCourse<br />
+}

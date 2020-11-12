@@ -1,0 +1,23 @@
+﻿@model MVC8amMindblowingbtch.Models.StudentModel
+@{
+    ViewBag.Title = "PartialViewExample";
+}
+
+<h2>Student Information with partial</h2>
+
+@{
+    var d = Html.Partial("_MyPartialView", Model);
+    int a = 10;
+    if (a == 10) {
+        @d;
+    }
+
+        }
+
+<h2>Student Information with Render partial</h2>
+
+@{
+
+Html.RenderPartial("_MyPartialView", Model);
+    
+    }

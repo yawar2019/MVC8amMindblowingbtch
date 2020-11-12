@@ -164,6 +164,9 @@
     <Content Include="Views\New\getStudentVModel.cshtml" />
     <Content Include="Views\New\getAllStudentVModel.cshtml" />
     <Content Include="Views\New\getAllStudentByDeptVModel.cshtml" />
+    <Content Include="Views\Default\PartialViewExample.cshtml" />
+    <Content Include="Views\Shared\_MyPartialView.cshtml" />
+    <Content Include="Views\Default\localYahoo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

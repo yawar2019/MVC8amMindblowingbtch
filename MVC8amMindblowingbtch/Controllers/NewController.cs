@@ -22,7 +22,7 @@ namespace MVC8amMindblowingbtch.Controllers
             return View();
         }
 
-        public ActionResult SendData()
+        public ViewResult SendData()
         {
             List<StudentModel> listobj = new List<StudentModel>();
              
@@ -104,7 +104,7 @@ namespace MVC8amMindblowingbtch.Controllers
             return View(listobj);
         }
 
-        public ActionResult getAllStudentByDeptVModel()
+        public ViewResult getAllStudentByDeptVModel()
         {
             List<StudentModel> listobj = new List<StudentModel>();
 
@@ -163,6 +163,8 @@ namespace MVC8amMindblowingbtch.Controllers
 
             return View(studentDpartObj);
         }
+
+      
     }
 }
 

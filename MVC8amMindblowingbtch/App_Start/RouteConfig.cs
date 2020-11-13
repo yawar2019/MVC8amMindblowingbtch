@@ -14,6 +14,12 @@ namespace MVC8amMindblowingbtch
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Bakery",
+                url: "Biscuits/FineBuiscuit",
+                defaults: new { controller = "Default", action = "Biscuit", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

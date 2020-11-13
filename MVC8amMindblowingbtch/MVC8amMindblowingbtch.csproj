@@ -167,6 +167,7 @@
     <Content Include="Views\Default\PartialViewExample.cshtml" />
     <Content Include="Views\Shared\_MyPartialView.cshtml" />
     <Content Include="Views\Default\localYahoo.cshtml" />
+    <Content Include="Views\Default\Biscuit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

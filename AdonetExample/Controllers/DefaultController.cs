@@ -62,5 +62,11 @@ namespace AdonetExample.Controllers
                 return View();
             }
         }
+
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.GetEmployeeById(id);
+            return View(emp);
+        }
     }
 }

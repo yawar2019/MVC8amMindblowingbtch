@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_MyLayout</title>
+</head>
+<body>
+    <div id="header" style="background-color:cadetblue;height:80px;width:100%">
+        <h3 style="text-align:center">Resturant</h3>
+    </div>
+    <div id="body" style="background-color:burlywood;height:100%;width:100%">
+        @RenderBody()<br />
+        <div id="AdvertismentSection">
+            @if (IsSectionDefined("MySection"))
+            {
+                @RenderSection("MySection", false)
+               
+            }
+            else
+            {
+                <p>No Section is Defined</p>
+            }
+        </div>
+    </div>
+    <div id="footer" style="background-color:cadetblue;height:80px;width:100%">
+        CopyRight@2020
+    </div>
+</body>
+</html>

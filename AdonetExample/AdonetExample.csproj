@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6EA2BC61-B76C-4670-81FD-35277AAE8C69}</ProjectGuid>
+    <ProjectGuid>{840DCEE1-A2C3-472E-A844-FB5B00DC2024}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MVC8amMindblowingbtch</RootNamespace>
-    <AssemblyName>MVC8amMindblowingbtch</AssemblyName>
+    <RootNamespace>AdonetExample</RootNamespace>
+    <AssemblyName>AdonetExample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -131,18 +131,14 @@
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\New\GetMyView2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DepartmentModel.cs" />
-    <Compile Include="Models\StudentDept.cs" />
-    <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,24 +149,13 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\New\GetMyView.cshtml" />
-    <Content Include="Views\Default\Index.cshtml" />
-    <Content Include="Views\New\Dragon.cshtml" />
-    <Content Include="Views\New\SendData.cshtml" />
-    <Content Include="Views\New\getStudentVModel.cshtml" />
-    <Content Include="Views\New\getAllStudentVModel.cshtml" />
-    <Content Include="Views\New\getAllStudentByDeptVModel.cshtml" />
-    <Content Include="Views\Default\PartialViewExample.cshtml" />
-    <Content Include="Views\Shared\_MyPartialView.cshtml" />
-    <Content Include="Views\Default\localYahoo.cshtml" />
-    <Content Include="Views\Default\Biscuit.cshtml" />
-    <Content Include="Views\Shared\_MyLayout.cshtml" />
-    <Content Include="Views\Default\AboutUs.cshtml" />
-    <Content Include="Views\Default\ContactUs.cshtml" />
+    <Content Include="Views\Default\Create.cshtml" />
+    <Content Include="Views\Default\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -194,9 +179,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50973</DevelopmentServerPort>
+          <DevelopmentServerPort>52583</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50973/</IISUrl>
+          <IISUrl>http://localhost:52583/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

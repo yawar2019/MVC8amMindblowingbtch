@@ -3,7 +3,10 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Are you Really want to Delete this Record?</h2>
+
+@Model.EmpName<br />
+@Model.EmpSalary<br />
 
 <form action="~/Default/Delete/@Model.EmpId" method="post">
     <input type="submit" value="Submit" class="btn btn-success" />

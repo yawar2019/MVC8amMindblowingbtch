@@ -63,10 +63,26 @@ namespace AdonetExample.Controllers
             }
         }
 
+        [HttpGet]
         public ActionResult Delete(int? id)
         {
             EmployeeModel emp = db.GetEmployeeById(id);
             return View(emp);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            int i = db.Delete(id);
+
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

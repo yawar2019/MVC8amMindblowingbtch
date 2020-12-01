@@ -1,0 +1,75 @@
+﻿@model IEnumerable<DatabaseFirstApproach.Models.Medicine>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Formula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DisseaseId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Updationdate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Formula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DisseaseId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updationdate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MId })
+        </td>
+    </tr>
+}
+
+</table>

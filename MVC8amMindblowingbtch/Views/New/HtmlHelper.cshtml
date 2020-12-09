@@ -1,0 +1,45 @@
+﻿@model MVC8amMindblowingbtch.Models.StudentModel
+@{
+    ViewBag.Title = "HtmlHelper";
+}
+
+<h2>HtmlHelper</h2>
+
+<style>
+    .test {
+        font-family: Algerian;
+        font-size: larger;
+    }
+</style>
+
+<script>
+    function fun() {
+        alert("Your Name is "+document.getElementById('FirstName').value);
+    }
+</script>
+@Html.TextBox("FirstNames", "Rahul", new { @style = "background-color:skyblue;", @class = "test", @onchange = "fun()" })
+
+@Html.TextBoxFor(s => s.StudName, new { @style = "background-color:skyblue;", @class = "test", @onchange = "fun()" })
+
+@Html.DropDownList("Country", new List<SelectListItem>(){
+    new SelectListItem { Text = "India", Value = "1" },
+    new SelectListItem { Text = "China", Value = "2",Selected=true },
+    new SelectListItem {Text="Australia",Value="3"}
+},"Select Country")
+
+@Html.DropDownList("Employess")
+@Html.DropDownList("Emp", (IEnumerable<SelectListItem>)ViewBag.Employess,"Select Employee")<br />
+
+<span>java</span>@Html.CheckBox("java")
+<span>MVC</span>@Html.CheckBox("MVC",true)
+<span>Angular</span>@Html.CheckBox("Angular")
+<br />
+
+<span>Male</span>@Html.RadioButton("Gender","Male",true)
+<span>FeMale</span>@Html.RadioButton("Gender", "FeMale")
+<br />
+
+@Html.Password("pwd","hyd")
+@Html.TextArea("Address","Hyd",20,20,null)<br />
+
+@Html.EditorForModel(Model)<br />

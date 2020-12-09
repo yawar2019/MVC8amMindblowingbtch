@@ -163,8 +163,33 @@ namespace MVC8amMindblowingbtch.Controllers
 
             return View(studentDpartObj);
         }
+        public ActionResult ViewDataExample() {
+            ViewData["id"] = 1;
+            ViewBag.l = "ltm";
+            TempData["shirt"] = "blue";
+            return RedirectToAction("ViewDataExample1");
+        }
+        public ActionResult ViewDataExample1()
+        {
+            int a = Convert.ToInt32(ViewData["id"]);
+            string k = ViewBag.l;
+            //ViewBag.sid = TempData["shirt"];
+            //TempData.Keep();
+            ViewBag.sid = TempData.Peek("shirt");
+            return View();
+        }
 
-      
+        public ActionResult HtmlHelper()
+        {
+            StudentModel st = new Models.StudentModel();
+            st.StudName = "Hari";
+
+            EmployeeEntities db = new EmployeeEntities();
+            ViewBag.Employess=new SelectList(db.employeeDetails,"EmpId","EmpName", 17024);
+
+
+            return View(st);
+        }
     }
 }
 

@@ -1,4 +1,5 @@
-﻿@model MVC8amMindblowingbtch.Models.StudentModel
+﻿@using MVC8amMindblowingbtch.HelperControls
+@model MVC8amMindblowingbtch.Models.StudentModel
 @{
     ViewBag.Title = "HtmlHelper";
 }
@@ -13,8 +14,9 @@
 </style>
 
 <script>
-    function fun() {
-        alert("Your Name is "+document.getElementById('FirstName').value);
+    function fun(name) {
+        //alert("Your Name is "+document.getElementById('FirstName').value);
+        alert("Your Name is "+name);
     }
 </script>
 @Html.TextBox("FirstNames", "Rahul", new { @style = "background-color:skyblue;", @class = "test", @onchange = "fun()" })
@@ -43,3 +45,17 @@
 @Html.TextArea("Address","Hyd",20,20,null)<br />
 
 @Html.EditorForModel(Model)<br />
+
+@myHtmlHelper.MyLabel("I Agree with Agreement")<br />
+@Html.createUrControl("text")<br />
+@Html.createUrControl("checkbox")<br />
+@Html.createUrControl("file")<br />
+
+@helper labelbyrazzorcode(string content,string eventexp)
+{
+ 
+    <input type="text" id="FirstName"  @eventexp="fun('@content')" value="@content" />
+}
+@labelbyrazzorcode("Hari", "onclick")
+@labelbyrazzorcode("Chandra", "onchange")
+

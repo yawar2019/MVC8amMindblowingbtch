@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{1D2A32CC-8715-4459-9087-A98545E766BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleErrorFilter", "HandleErrorFilter\HandleErrorFilter.csproj", "{20FC3334-A690-48DF-8500-5E91BFFE4F96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1D2A32CC-8715-4459-9087-A98545E766BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D2A32CC-8715-4459-9087-A98545E766BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D2A32CC-8715-4459-9087-A98545E766BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FC3334-A690-48DF-8500-5E91BFFE4F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FC3334-A690-48DF-8500-5E91BFFE4F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FC3334-A690-48DF-8500-5E91BFFE4F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FC3334-A690-48DF-8500-5E91BFFE4F96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

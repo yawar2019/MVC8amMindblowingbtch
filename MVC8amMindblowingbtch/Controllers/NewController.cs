@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVC8amMindblowingbtch.Models;
+using MVC8amMindblowingbtch.Filter;
+
 namespace MVC8amMindblowingbtch.Controllers
 {
     public class NewController : Controller
@@ -189,6 +191,13 @@ namespace MVC8amMindblowingbtch.Controllers
 
 
             return View(st);
+        }
+
+        [MyFilter]
+        public ActionResult TestFilter()
+        {
+            ViewBag.Employee = "Rahul";
+            return View();
         }
     }
 }

@@ -4,10 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVC8amMindblowingbtch.Models;
+using System.Web.Security;
+using MVC8amMindblowingbtch.Filter;
 namespace MVC8amMindblowingbtch.Controllers
 {
+  
     public class DefaultController : Controller
     {
+         [MyFilter]
         // GET: Default
         public ViewResult Index()
         {
@@ -171,14 +175,67 @@ namespace MVC8amMindblowingbtch.Controllers
             }
 
         }
-
+        [Authorize]
         public ActionResult AboutUs()
         {
             return View();
         }
+        [Authorize]
         public ActionResult ContactUs()
         {
             return View();
+        }
+        [HttpGet]
+        public ActionResult ValidationExample()
+        {
+            return View();
+
+        }
+    
+        [HttpPost]
+        public ActionResult ValidationExample(Register r)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                ///
+
+                return Redirect("~/Default/ValidationExample");
+            }
+            else
+            {
+                return View(r);
+
+            }
+
+        }
+
+
+
+
+
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+
+        }
+
+        [HttpPost]
+        public ActionResult Login(Register reg)
+        {
+            if (reg.EmpName == "Admin" && reg.Password == "Admin")
+            {
+                FormsAuthentication.SetAuthCookie(reg.EmpName, false);
+                return Redirect("~/Default/AboutUs");
+            }
+            else
+            {
+                return View();
+
+            }
+
         }
     }
 }

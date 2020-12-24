@@ -26,5 +26,20 @@ namespace HandleErrorFilter.Controllers
 
             return View();
         }
+      
+        public ActionResult GetResult(string id)
+        {
+            try
+            {
+
+                int b = Convert.ToInt32(id);
+                ViewBag.info = b;
+                return View();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
